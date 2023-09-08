@@ -501,7 +501,10 @@ function updateGap(acediff) {
   decorate(acediff);
 
   // reposition the copy containers containing all the arrows
-  positionCopyContainers(acediff);
+
+  if (acediff.options.left.copyLinkEnabled || acediff.options.right.copyLinkEnabled) {
+    positionCopyContainers(acediff);
+  }
 }
 
 
